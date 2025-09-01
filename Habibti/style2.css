@@ -1,0 +1,91 @@
+/* 🎀 General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 🎀 Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+}
+
+/* 🎀 Love Note Card */
+.love-note {
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Heading inside love note */
+.love-note h2 {
+  font-size: 2rem;
+  color: #d6336c;
+  margin-bottom: 15px;
+}
+
+/* Paragraph inside love note */
+.love-note p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+/* 🎀 Navigation Buttons */
+.nav {
+  margin-top: 30px;
+  display: flex;
+  gap: 15px;
+}
+
+.nav a {
+  text-decoration: none;
+  background: #d6336c;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #b02355;
+  transform: scale(1.05);
+}
+
+/* 🎀 Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🎀 Responsive (Mobile View) */
+@media (max-width: 600px) {
+  .love-note h2 {
+    font-size: 1.6rem;
+  }
+  .love-note p {
+    font-size: 1rem;
+  }
+  .nav {
+    flex-direction: column;
+  }
+  .nav a {
+    width: 100%;
+    text-align: center;
+  }
+}

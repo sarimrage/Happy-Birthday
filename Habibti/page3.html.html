@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Love Gallery ❤️</title>
+  <link rel="stylesheet" href="style3.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #c70039;
+      animation: fadeInDown 1s ease;
+    }
+
+    nav {
+      margin: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: white;
+      background: #c70039;
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin: 5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    nav a:hover {
+      background: white;
+      color: #c70039;
+      transform: scale(1.1);
+    }
+
+   .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); 
+  gap: 10px; 
+  padding: 10px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* always 2 per row */
+  gap: 12px;
+  padding: 15px;
+}
+
+.gallery img,
+.gallery video {
+  width: 100%; 
+  height: auto; 
+  border-radius: 12px; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+  
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      animation: fadeIn 0.5s ease;
+    }
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 80%;
+      border-radius: 15px;
+      animation: zoomIn 0.4s ease;
+    }
+    .lightbox video, .lightbox img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(255,0,100,0.5);
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .close:hover {
+      color: #ff9a9e;
+      transform: scale(1.2);
+    }
+
+    footer {
+      margin: 20px;
+      font-size: 14px;
+      color: #444;
+      animation: fadeIn 2s ease;
+    }
+
+    /* Background floating hearts */
+    .heart {
+      position: fixed;
+      bottom: -10px;
+      font-size: 20px;
+      color: rgba(255, 0, 100, 0.7);
+      animation: floatUp 6s linear infinite;
+    }
+
+    @keyframes floatUp {
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to { transform: translateY(-120vh) scale(1.5); opacity: 0; }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes zoomIn {
+      from { transform: scale(0.8); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>💞 Our Gallery 💞</header>
+
+  <nav>
+    <a href="index.html.html">Home</a>
+    <a href="page2.html.html">Our Story</a>
+    <a href="page3.html.html">Gallery</a>
+  </nav>
+
+  <section class="gallery">
+  <div class="gallery-item">
+      <img src="image2.jpg" alt="Memory 1">
+    
+    <p class="note">😁😁😁Sab sah best Picture Apki. Wasa Badmash lag rahi han🙂</p>
+  </div>
+
+  <div class="gallery-item">
+    
+      <img src="image4.jpg" alt="Memory 2">
+    
+    <p class="note">🙄🙄Yah Creater nah kuu dal dia </p>
+  </div>
+
+    <div class="gallery-item">
+    
+      <img src="image1.png" alt="Memory 1">
+  
+    <p class="note">Maat Pochan manah yah kuu Dala Bas dal dia manah😁</p>
+  </div>
+
+    <div class="gallery-item">
+    
+      <img src="image3.jpg" alt="Memory 4">
+
+    <p class="note">Ap tho chori Karti nahi 🙄🙄🙄</p>
+  </div>
+
+   <div class="gallery-item">
+      <img src="image6.jpg" alt="Memory 6">
+    <p class="note">NO COMMENTS🙄</p>
+  </div>
+     <div class="gallery-item">
+      <img src="image7.jpg" alt="Memory 7">
+    <p class="note">Mehnat chal rahi Ha 9th ka PakStudies ka paper mah🙄🙄🙄</p>
+  </div>
+
+   <div class="gallery-item">
+  <img src="image8.jpg" alt="Memory 8">
+    <p class="note">Dakh lan white hou Black nahi. Lakin aik tho ap🧐Manti hi nahi</p>
+  </div>
+
+
+
+  <div class="gallery-item">
+    <video src="video1.mp4" controls></video>
+    <p class="note">IS pah mah kia bolu mah kch nahi kha sakta🙂🙂😘</p>
+  </div>
+
+    <div class="gallery-item">
+    <video src="video3.mp4" controls></video>
+    <p class="note">ISA skip karan maza maza mah daal dia 🙂</p>
+  </div>
+
+
+  <div class="gallery-item">
+    <video src="video2.mp4" controls></video>
+    <p class="note">🙂🙂</p>
+  </div>
+
+ <div class="gallery-item">
+  <img src="55.png" alt="Memory 8">
+    <p class="note">AB ULTA MAAT SOCHNAH KA MERA PASS KIA KAR RAHI HA 
+      JAB AP NAH PHALI BAAR LAGAI THI TAB KI PHARI HA MERA PASS APKI BLUR THI THO MANAH THORI POLISH KAR DI 
+      PER SOCHA KA YAH SAHI NAHI HA THO MANAH DELETE KAR DI .PER DUBARA AJ APNI GOOGLE CLOUD CHECK KAR RAHA THA US MAH MIL GAI THO NIKAL 
+      KA LAGA DI. OR NARAZ NAH HOIYA GAH OR NAH GUSSAH OR JO BHI BAS ULTA SIDA NAHI.
+      SACH BOLTA HOU AP SAH 🙂🙂
+    </p>
+  </div>
+
+  </section>
+
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <div class="lightbox-content" id="lightbox-content"></div>
+  </div>
+
+  <footer>Made with ❤️ for Tayyabah Ashraf</footer>
+
+  <script>
+    const items = document.querySelectorAll('.gallery-item');
+    const lightbox = document.getElementById('lightbox');
+    const lightboxContent = document.getElementById('lightbox-content');
+
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxContent.innerHTML = item.innerHTML;
+        const vid = lightboxContent.querySelector("video");
+        if (vid) { vid.setAttribute("controls", "true"); vid.play(); }
+      });
+    });
+
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      lightboxContent.innerHTML = "";
+    }
+
+    // Floating hearts
+    setInterval(() => {
+      const heart = document.createElement("div");
+      heart.classList.add("heart");
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = (Math.random() * 20 + 15) + "px";
+      document.body.appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }, 800);
+  </script>
+</body>
+</html>
